@@ -30,6 +30,7 @@ test('@Web Client App login', async ({ page }) => {
 })
 
 // test("Client App Login", async ({ page }) => {
+//   const email = "anshika@gmail.com";
 //   const productName = "ZARA COAT 3";
 //   const products = page.locator(".card-body");
 //   await page.goto("https://rahulshettyacademy.com/client");
@@ -47,7 +48,7 @@ test('@Web Client App login', async ({ page }) => {
 //     }
 //   }
 
-//   await locator("[routerlink*='cart']").click(); // click on cart for routing to another page
+//   await page.locator("[routerlink*='cart']").click(); // click on cart for routing to another page
 //   await page.locator("div li").first().waitFor(); //wait until the element show up in page
 //   const bool = await page.locator("h3:has-text('ZARA COAT 3')").isVisible(); //ตรวจสอบว่า element ที่มีข้อความ ZARA COAT 3 มีการแสดงผลอยู่ในหน้าไหม
 //   expect(bool).toBeTruthy(); //

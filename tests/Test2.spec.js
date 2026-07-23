@@ -77,18 +77,18 @@ test.only("@Test2 Booking Ticket", async ({ page }) => {
   await expect(page.locator(".font-bold", { hasText: "B-" })).toBeVisible();
   await expect(page.locator("h1")).toBeVisible();
 
-  const refText = await page.locator(".font-bold", { hasText: "B-" }).textContent();
-  const h1Text = await page.locator("h1").textContent();
+  const refText2 = await page.locator(".font-bold", { hasText: "B-" }).textContent();
+  const h1Text2 = await page.locator("h1").textContent();
 
-  expect(refText.charAt(0).toLowerCase()).toBe(h1Text.charAt(0).toLowerCase());
+  expect(refText2.charAt(0).toLowerCase()).toBe(h1Text2.charAt(0).toLowerCase());
 
   //Step 5
  
   await page.locator('[data-testid="check-refund-btn"]').click();
 
-  const spinner = page.locator("#refund-spinner");
-  await expect(spinner).toBeVisible();
-  await expect(spinner).toBeHidden({ timeout: 6000 });
+  const spinner2 = page.locator("#refund-spinner");
+  await expect(spinner2).toBeVisible();
+  await expect(spinner2).toBeHidden({ timeout: 6000 });
 
   //Step 6
    expect(await page.locator('#refund-result')).toBeVisible();

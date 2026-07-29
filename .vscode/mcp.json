@@ -1,0 +1,32 @@
+{
+	"servers": {
+		"playwright": {
+			"type": "stdio",
+			"sandboxEnabled": false,
+			"command": "npx",
+			"cwd": "${input:cwd}",
+			"args": [
+				"@playwright/mcp@0.0.78"
+			],
+			"dev": {
+				"watch": [],
+				"debug": {
+					"type": "${input:debugType}"
+				}
+			},
+			"env": {}
+		}
+	},
+	"inputs": [
+		{
+			"id": "cwd",
+			"type": "promptString",
+			"description": "Working Directory"
+		},
+		{
+			"id": "debugType",
+			"type": "promptString",
+			"description": "Debug Type"
+		}
+	]
+}
